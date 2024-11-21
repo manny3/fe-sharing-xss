@@ -54,7 +54,7 @@ http://example.com/search?query=<script>alert('xss')
 <img
   v-click
   class="contain h-50 mt-4"
-  src="./reflected-xss.png"
+  src="/reflected-xss.png"
   alt=""
 />
 
@@ -136,7 +136,7 @@ javascript:alert('XSS')
 <div class="flex justify-center mt-6">
 <img
   class="contain h-80"
-  src="./script_html.gif"
+  src="/script_html.gif"
   alt=""
 />
 </div>
@@ -151,7 +151,7 @@ javascript:alert('XSS')
 <div class="flex justify-center mt-6">
 <img
   class="contain h-80"
-  src="./img_html.gif"
+  src="/img_html.gif"
   alt=""
 />
 </div>
@@ -228,7 +228,7 @@ headerText.replace(`{{${1}}}`, `<span>${header.params}</span>`);
 <div class="flex justify-center mt-6">
 <img
   class="contain h-80"
-  src="./script_fix.png"
+  src="/script_fix.png"
   alt=""
 />
 </div>
@@ -243,7 +243,7 @@ headerText.replace(`{{${1}}}`, `<span>${header.params}</span>`);
 <div class="flex justify-center mt-6">
 <img
   class="contain h-80"
-  src="./img_fix.png"
+  src="/img_fix.png"
   alt=""
 />
 </div>
