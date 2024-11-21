@@ -9,5 +9,8 @@
     "@slidev/cli": "latest",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   }
 }
