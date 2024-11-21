@@ -191,26 +191,26 @@ function sanitizeHTML(input: string): string {
 # Security Fix
 ````md magic-move {lines: true}
 ```html
-<!-- DefaultReplySetting.vue -->
+<!-- MessagePreviewCard.vue -->
 <div
   v-linkified
   v-html="temp.content"
 />
 
-<!-- MessagePreviewCard.vue -->
+<!-- TemplatePreview.vue -->
 <script>
 headerText.replace(`{{${1}}}`, `<span>${header.params}</span>`);
 </script>
 ```
 
 ```html
-<!-- DefaultReplySetting.vue -->
+<!-- MessagePreviewCard.vue -->
 <div
   v-linkified
   v-html="sanitizeHTML(temp.content)"
 />
 
-<!-- MessagePreviewCard.vue -->
+<!-- TemplatePreview.vue -->
 <script>
   const sanitizeHeaderParams = sanitizeHTML(header.params);
   headerText.replace(`{{${1}}}`, `<span>${sanitizeHeaderParams}</span>`);
@@ -250,10 +250,19 @@ headerText.replace(`{{${1}}}`, `<span>${header.params}</span>`);
 
 ---
 
+# Asgard / Niffler
+
+- Default Reply Preview
+- WhatsApp Template Preview
+- WhatsApp flow Preview
+
+
+---
+
 # DOMPurify
 
 
-```html
+```html{all|2,7,12}
 <script>
 import DOMPurify from 'dompurify';
 
@@ -278,7 +287,7 @@ export default {
 # vue-dompurify-html
 
 
-```js
+```js {all|1,4,7,10-13}
 // main.js
 import { createApp } from 'vue';
 import App from './App.vue';
@@ -305,3 +314,5 @@ class: text-center
 [OWASP XSS Prevention](https://owasp.org/www-community/attacks/xss/) · [MDN Web Security](https://developer.mozilla.org/en-US/docs/Web/Security)
 
 Remember: Security is a continuous process, not a one-time task.
+
+
